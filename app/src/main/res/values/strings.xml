@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Device Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sensors">Sensors</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="magnetometer">Magnetometer</string>
+    <string name="gps">GPS</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="pedometer">Pedometer</string>
+    <string name="proximity">Proximity</string>
+    <string name="light">Light</string>
+    <string name="barometer">Barometer</string>
+    <string name="infrared">Infrared</string>
+    <string name="nfc">NFC</string>
+    <string name="compass">Compass</string>
+    <string name="accelerometer_info">The accelerometer sensor in Android measures the acceleration forces acting on a device along three axes: X, Y, and Z. It provides information about the device\'s movement and orientation in three-dimensional space</string>
+    <string name="accelerometer_status">Status</string>
+    <string name="status">Status</string>
+    <string name="name">Name</string>
+    <string name="vendor">Vendor</string>
+    <string name="version">Version</string>
+    <string name="power">Power</string>
+    <string name="resolution">Resolution</string>
+    <string name="max_range">Max Range</string>
+    <string name="gyroscope_info">The gyroscope sensor in Android measures the angular velocity or rotation rate of a device around three axes: X, Y, and Z. It provides information about the device\'s rotational movement and orientation</string>
+    <string name="mag_info">The magnetometer sensor in Android measures the strength and direction of the magnetic field around a device. It provides information about the device\'s orientation with respect to the Earth\'s magnetic field</string>
+    <string name="compass_info">The compass functionality is typically implemented using the device\'s magnetometer sensor. The magnetometer is a type of sensor that measures the strength and direction of the magnetic field around the device. It provides information about the Earth\'s magnetic field, allowing the device to act as a compass.</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="gps_current_location">GPS (Current Location)</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="enable">Enable</string>
+    <string name="search">Search</string>
+    <string name="screen_info">"Place and hold your hand against camera face for 5 to 10 seconds until screen is turned off"</string>
+    <string name="save_location">Save Location</string>
+    <string name="gps_info">It refers to the functionality and capabilities related to obtaining the device\'s geographical location using the Global Navigation Satellite System (GNSS). It allows Android applications to access precise location information, such as latitude and longitude coordinates, altitude, speed, and bearing.</string>
+    <string name="proximity_info">The primary purpose of the proximity sensor is to determine if the device is being held near the user\'s face during a phone call, allowing for features like automatic screen off during calls or preventing accidental touch input.</string>
+    <string name="rotate_screen">Rotate screen</string>
+    <string name="progress_text">Please wait...</string>
+    <string name="please_wait">Please wait</string>
+</resources>

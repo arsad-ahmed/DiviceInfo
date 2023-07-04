@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.deviceinfo.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_accelerometerFragment"
+            app:destination="@id/accelerometerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gyroscopeFragment"
+            app:destination="@id/gyroscopeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_magnetometerFragment"
+            app:destination="@id/magnetometerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_compassFragment"
+            app:destination="@id/compassFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gpsFragment"
+            app:destination="@id/gpsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_proximityFragment"
+            app:destination="@id/proximityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accelerometerFragment"
+        android:name="com.example.deviceinfo.fragments.AccelerometerFragment"
+        android:label="fragment_accelerometer"
+        tools:layout="@layout/fragment_accelerometer" />
+    <fragment
+        android:id="@+id/gyroscopeFragment"
+        android:name="com.example.deviceinfo.fragments.GyroscopeFragment"
+        android:label="GyroscopeFragment"
+        tools:layout="@layout/fragment_gyroscope"/>
+    <fragment
+        android:id="@+id/magnetometerFragment"
+        android:name="com.example.deviceinfo.fragments.MagnetometerFragment"
+        android:label="MagnetometerFragment"
+        tools:layout="@layout/fragment_magnetometer"/>
+    <fragment
+        android:id="@+id/compassFragment"
+        android:name="com.example.deviceinfo.fragments.CompassFragment"
+        android:label="CompassFragment"
+        tools:layout="@layout/fragment_compass"/>
+    <fragment
+        android:id="@+id/gpsFragment"
+        android:name="com.example.deviceinfo.fragments.GpsFragment"
+        android:label="GpsFragment"
+        tools:layout="@layout/fragment_gps"/>
+    <fragment
+        android:id="@+id/proximityFragment"
+        android:name="com.example.deviceinfo.fragments.ProximityFragment"
+        android:label="ProximityFragment"
+        tools:layout="@layout/fragment_proximity"/>
+</navigation>

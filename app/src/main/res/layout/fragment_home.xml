@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.example.deviceinfo.fragments.HomeFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".fragments.HomeFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_tv"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginHorizontal="10dp"
+            android:textStyle="bold"
+            android:text="@string/sensors"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cv2"
+            app:layout_constraintTop_toBottomOf="@+id/main_tv"
+            android:onClick="@{()->fragment.moveToAccelerometerFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/accelerometer" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accelerometer"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toEndOf="@+id/cv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cv1"
+            android:onClick="@{()->fragment.moveToGyroscopeFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/gyroscope" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gyroscope"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv1"
+            app:layout_constraintEnd_toStartOf="@id/cv4"
+            android:onClick="@{()->fragment.moveToMagnetometerFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/magnetometer" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/magnetometer"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv4"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toEndOf="@id/cv3"
+            app:layout_constraintTop_toTopOf="@id/cv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{()->fragment.moveToGpsFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/gps" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gps"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv5"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            android:layout_marginTop="30dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv3"
+            app:layout_constraintEnd_toStartOf="@id/cv6"
+            android:onClick="@{()->fragment.moveToProximityFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/proximity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proximity"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv6"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintStart_toEndOf="@id/cv5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cv5"
+            android:onClick="@{()->fragment.moveToCompassFragment()}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/compass" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compass"
+                android:textColor="@color/black"
+                android:layout_margin="2dp"
+                android:layout_gravity="bottom|center_horizontal" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
